@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import { TerminalCard } from '../components/TerminalCard';
 import { FeatureCard } from '../components/FeatureCard';
+import winvoidPreview from '../assets/winvoid-preview.png';
 import { Toast } from '../components/Toast';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useGlowEffect } from '../hooks/useGlowEffect';
@@ -158,11 +159,11 @@ export const WindowsAppsGuide = () => {
                   animation: 'float 6s ease-in-out infinite',
                   transform: 'translateY(0)'
                 }}>
-                  <img src={`${import.meta.env.BASE_URL}winvoid-preview.png`} alt="WinVoid App Remover" fetchPriority="high" loading="eager" style={{ width: '100%', display: 'block' }} />
+                  <img src={winvoidPreview} alt="WinVoid App Remover" fetchPriority="high" loading="eager" style={{ width: '100%', display: 'block' }} />
                 </div>
 
                 <a 
-                  href={`${import.meta.env.BASE_URL}WinVoid App Remover.exe`}
+                  href={`${import.meta.env.BASE_URL}WinVoid_App_Remover.exe`}
                   download="WinVoid_App_Remover.exe"
                   style={{
                     display: 'inline-block',
