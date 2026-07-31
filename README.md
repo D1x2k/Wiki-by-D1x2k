@@ -27,13 +27,11 @@
 ## 📺 Видеогайды
 Предпочитаете смотреть, а не читать? Все гайды и инструкции в видеоформате собраны на моем [YouTube-канале](https://www.youtube.com/@D1x2k-).
 
-<img width="1919" height="701" alt="123312123" src="https://github.com/user-attachments/assets/bdb6f7b5-19c5-4703-acf9-36b78b95916a" />
-
-
-
 ---
 
 # 🇬🇧 English (EN)
+
+<img width="1919" height="701" alt="123312123" src="https://github.com/user-attachments/assets/bdb6f7b5-19c5-4703-acf9-36b78b95916a" />
 
 ## Welcome to my personal knowledge base!
 Here I collect, structure, and store useful information, documentation for my projects, guides, and just interesting notes.
