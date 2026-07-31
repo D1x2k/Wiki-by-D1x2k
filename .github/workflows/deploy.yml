@@ -35,14 +35,16 @@ jobs:
 
       - name: Установка зависимостей (Install)
         run: npm install
+        working-directory: ./Site
 
       - name: Сборка проекта (Build)
         run: npm run build
+        working-directory: ./Site
 
       - name: Подготовка артефактов (Upload artifact)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./Site/dist
 
   # Задача публикации (Deploy)
   deploy:
