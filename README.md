@@ -5,7 +5,8 @@
 
 <br>
 
-<img width="1915" height="676" alt="image" src="https://github.com/user-attachments/assets/2b19c31b-61c9-49a0-ab92-a905f615f370" />
+<img width="1919" height="701" alt="123123" src="https://github.com/user-attachments/assets/49c3d25b-eb3b-497c-a00a-01c7e6e802b6" />
+
 
 ---
 
@@ -25,6 +26,10 @@
 
 ## 📺 Видеогайды
 Предпочитаете смотреть, а не читать? Все гайды и инструкции в видеоформате собраны на моем [YouTube-канале](https://www.youtube.com/@D1x2k-).
+
+<img width="1919" height="701" alt="123312123" src="https://github.com/user-attachments/assets/bdb6f7b5-19c5-4703-acf9-36b78b95916a" />
+
+
 
 ---
 
