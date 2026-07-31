@@ -1,6 +1,7 @@
 # 📚 Wiki by D1x2k
 
-<img width="1060" height="673" alt="Превью сайта" src="https://github.com/user-attachments/assets/ea37a140-9528-414a-ae2d-2dbe319b6df7" />
+<img width="1915" height="676" alt="image" src="https://github.com/user-attachments/assets/2b19c31b-61c9-49a0-ab92-a905f615f370" />
+
 
 ## Добро пожаловать в мою персональную базу знаний!
 Здесь я собираю, структурирую и храню полезную информацию, документацию по своим проектам, гайды и просто интересные заметки.
