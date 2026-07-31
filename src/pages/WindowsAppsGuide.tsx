@@ -158,13 +158,12 @@ export const WindowsAppsGuide = () => {
                   animation: 'float 6s ease-in-out infinite',
                   transform: 'translateY(0)'
                 }}>
-                  {/* Пожалуйста, поместите прикрепленную картинку в папку public с именем winvoid-preview.png */}
-                  <img src="/winvoid-preview.png" alt="WinVoid App Remover" fetchPriority="high" loading="eager" style={{ width: '100%', display: 'block' }} />
+                  <img src={`${import.meta.env.BASE_URL}winvoid-preview.png`} alt="WinVoid App Remover" fetchPriority="high" loading="eager" style={{ width: '100%', display: 'block' }} />
                 </div>
 
                 <a 
-                  href="/WinVoid App Remover.exe" 
-                  download="WinVoid App Remover.exe"
+                  href={`${import.meta.env.BASE_URL}WinVoid App Remover.exe`}
+                  download="WinVoid_App_Remover.exe"
                   style={{
                     display: 'inline-block',
                     padding: '16px 32px',
