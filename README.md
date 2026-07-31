@@ -5,12 +5,12 @@
 
 <br>
 
-<img width="1919" height="701" alt="123123" src="https://github.com/user-attachments/assets/49c3d25b-eb3b-497c-a00a-01c7e6e802b6" />
-
 
 ---
 
 # 🇷🇺 Русский (RU)
+
+<img width="1919" height="701" alt="123123" src="https://github.com/user-attachments/assets/49c3d25b-eb3b-497c-a00a-01c7e6e802b6" />
 
 ## Добро пожаловать в мою персональную базу знаний!
 Здесь я собираю, структурирую и храню полезную информацию, документацию по своим проектам, гайды и просто интересные заметки.
