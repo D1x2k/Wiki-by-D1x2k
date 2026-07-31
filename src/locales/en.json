@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "back": "← Back to guides"
+  },
+  "toast": {
+    "copied": "Command copied!"
+  },
+  "dashboard": {
+    "title": "Knowledge Base",
+    "tagline": "Welcome! Here are the best scripts for bypassing blocks and optimization.",
+    "cards": {
+      "windows": {
+        "title": "Windows Activation",
+        "desc": "Automatic and manual installation of official KMS keys for Windows 10/11."
+      },
+      "xbox": {
+        "title": "Remove Xbox Game Bar",
+        "desc": "Complete removal of Xbox Game Bar and fix for the annoying \"ms-gamebar\" error."
+      },
+      "cloudflare": {
+        "title": "Cloudflare One Client",
+        "desc": "Restore Cloudflare One Client functionality in Russia."
+      },
+      "windows_apps": {
+        "title": "Remove System Apps",
+        "desc": "Script to safely remove built-in and bloatware apps from Windows."
+      }
+    }
+  },
+  "cloudflare": {
+    "title": "Restore",
+    "tooltip": "A secure application for connecting to Cloudflare's Zero Trust network",
+    "step1": {
+      "title": "Download and extract the <1>zapret discord youtube</1> program."
+    },
+    "step2": {
+      "title": "Navigate to <1>lists\\list-general.txt</1> and paste the following domains:"
+    },
+    "step3": {
+      "title": "Navigate to <1>utils/target.txt</1> and paste the following lines:"
+    }
+  },
+  "windows": {
+    "title": "Windows Activation",
+    "tabs": {
+      "auto": "Automatic",
+      "manual": "Manual"
+    },
+    "auto": {
+      "title": "⚡ Automatic Installation",
+      "step1": "Open <1>Command Prompt</1> <strong>as Administrator</strong>.",
+      "step2": "Click the block below to copy the automated command. Paste it into the console using <strong>Ctrl + V</strong> and press <strong>Enter</strong>.",
+      "adv_title": "Script Advantages",
+      "adv1": "Automatically downloads the latest and freshest version of the code directly from <1>GitHub</1>.",
+      "adv2": "A smart algorithm will instantly select and integrate the official <1>GVLK key</1>, matching your current OS edition perfectly.",
+      "adv2_tooltip": "Generic Volume License Key - multiple activation key",
+      "adv3": "Stays clean: immediately deletes the temporary executable file from the <1>%TEMP%</1> directory after completion.",
+      "sec_title": "Security Guarantee",
+      "sec1": "The command downloads a verified <1>.bat</1> file exclusively from the project's official repository. You can verify this yourself by examining the raw web link in the command.",
+      "sec2": "The architecture of the <1>.bat</1> file is completely transparent and open: the code consists of only 41 lines, most of which are decorative console interface design. No hidden algorithms.",
+      "sec3": "We support freedom of choice: you can always download this <1>.bat</1> file manually and run it yourself, or configure everything through the manual mode."
+    },
+    "manual": {
+      "title": "Manual Installation",
+      "step1": "Open <1>Command Prompt</1> <strong>as Administrator</strong>.",
+      "step2": "Copy, paste, and press <strong>Enter</strong> for each of the commands below.",
+      "list1": "1. Install the public KMS key (for Windows 10/11 Pro)",
+      "list2": "2. Connect to the licensing server",
+      "list3": "3. Start the system activation process",
+      "list4": "4. Verify successful activation",
+      "info": "💡 <strong>Important:</strong> The key in the string is configured for the <strong>Pro</strong> version by default. If you have a different edition installed, simply copy the appropriate key from the table below and replace the first block of characters (<1>W269N-...</1>) in the command before pressing <strong>Enter</strong>.",
+      "table_title": "List of Official KMS Keys (GVLK)",
+      "table_edition": "Windows Edition",
+      "table_key": "Public KMS Key"
+    }
+  },
+  "xbox": {
+    "title": "Remove Xbox Game Bar",
+    "tabs": {
+      "auto": "Automatic",
+      "manual": "Manual"
+    },
+    "auto": {
+      "title": "Complete removal of Xbox Game Bar",
+      "step1": "Open <1>Command Prompt (cmd)</1> <strong>as Administrator</strong>.",
+      "step2": "Paste the following command and press <strong>Enter</strong>:",
+      "adv_title": "Script Advantages",
+      "adv1": "Automatically downloads the latest and freshest version of the code directly from <1>GitHub</1>.",
+      "adv2": "The script automatically executes all necessary commands and registry changes for a complete removal of Xbox Game Bar.",
+      "adv3": "Stays clean: immediately deletes the temporary executable file from the <1>%TEMP%</1> directory after completion.",
+      "sec_title": "Security Guarantee",
+      "sec1": "The command downloads a verified <1>.bat</1> file exclusively from the project's official repository. You can verify this yourself by examining the raw web link in the command.",
+      "sec2": "The architecture of the <1>.bat</1> file is completely transparent and open.",
+      "sec3": "We support freedom of choice: you can always download this <1>.bat</1> file manually and run it yourself, or configure everything through the manual mode."
+    },
+    "manual": {
+      "title": "Manual removal of Xbox Game Bar",
+      "step1": "Open <1>Command Prompt (cmd)</1> <strong>as Administrator</strong>.",
+      "step2": "Paste the following command and press <strong>Enter</strong>:",
+      "fix_title": "Fix \"ms-gamebar\" error",
+      "fix_step1": "Open <1>Command Prompt (cmd)</1> <strong>as Administrator</strong>.",
+      "fix_step2": "Run the following commands to apply registry fixes:",
+      "fix_list1": "1. Disable app capture",
+      "fix_list2": "2. Disable background game recording (",
+      "fix_list2_tooltip": "Built-in Windows feature for recording video and screenshots in the background",
+      "fix_list2_2": ")",
+      "fix_list3": "3. Disable full-screen optimizations",
+      "reboot": "After applying all changes, <strong>it is recommended to restart your computer</strong> for the settings to take effect."
+    }
+  },
+  "windows_apps": {
+    "title": "Remove System Apps",
+    "tabs": {
+      "auto": "Automatic",
+      "manual": "Manual"
+    },
+    "auto": {
+      "title": "Automatic Setup (WinVoid)",
+      "winvoid_desc": "Remove system bloatware and pre-installed Windows apps in one click. Fast, secure, and stylish.",
+      "winvoid_download": "Download WinVoid App Remover",
+      "winvoid_feat1_title": "Lightning Fast",
+      "winvoid_feat1_desc": "Written in Rust and Tauri, works without delays.",
+      "winvoid_feat2_title": "Complete Safety",
+      "winvoid_feat2_desc": "No hidden scripts, deletes only what you selected.",
+      "winvoid_feat3_title": "Easy Recovery",
+      "winvoid_feat3_desc": "Ability to restore deleted apps in one click.",
+      "step1": "Open <span className=\"inline-code\">PowerShell</span> <b>as Administrator</b>.",
+      "step2": "Paste the following command and press <b>Enter</b>:",
+      "adv_title": "Script Advantages",
+      "adv1": "Automatically downloads the latest script version from <1>GitHub</1>.",
+      "adv2": "Safely removes bloatware and unnecessary built-in apps without harming the system.",
+      "adv3": "Frees up system resources, RAM, and disk space.",
+      "sec_title": "Security Guarantee",
+      "sec1": "Downloads the verified script exclusively from the official repository.",
+      "sec2": "The script is completely open source and contains no hidden actions or malware.",
+      "sec3": "You can always review the code before running it."
+    },
+    "manual": {
+      "title": "Manual Removal",
+      "step1": "Open <1>PowerShell</1> <strong>as Administrator</strong>.",
+      "step2": "Copy the command for the app you want to remove:",
+      "apps": {
+        "copilot": "365 Copilot",
+        "appcompat": "ApplicationCompatibilityEnhancements",
+        "av1": "AV1VideoExtension",
+        "avc": "AVCEncoderVideoExtension",
+        "bingsearch": "BingSearch",
+        "webexperience": "Client.WebExperience",
+        "crossdevice": "CrossDevice",
+        "devhome": "Dev Home",
+        "gameassist": "GameAssist",
+        "heif": "HEIFImageExtension",
+        "hevc": "HEVCVideoExtension",
+        "winappruntime": "MicrosoftCorporationII.WinAppRuntime.Main.1.8",
+        "mpeg2": "MPEG2VideoExtension",
+        "onedrive": "OneDrive",
+        "outlook": "Outlook",
+        "paint": "Paint",
+        "powerautomate": "Power Automate",
+        "rawimage": "RawImageExtension",
+        "solitaire": "Solitaire & Casual Games",
+        "store": "Store",
+        "storepurchase": "StorePurchaseApp",
+        "teams": "Teams",
+        "todo": "To Do",
+        "vp9": "VP9VideoExtensions",
+        "webmedia": "WebMediaExtensions",
+        "webp": "WebpImageExtension",
+        "widgets": "WidgetsPlatformRuntime",
+        "notepad": "Notepad",
+        "quickassist": "Quick Assist",
+        "stickynotes": "Sticky Notes",
+        "soundrecorder": "Sound Recorder",
+        "calculator": "Calculator",
+        "camera": "Camera",
+        "mediaplayer": "Media Player",
+        "news": "News: Breaking news and important articles",
+        "snippingtool": "Snipping Tool",
+        "weather": "Weather",
+        "remotedesktop": "Remote Desktop Connection",
+        "yourphone": "Phone Link",
+        "terminal": "Terminal",
+        "gethelp": "Get Help",
+        "photos": "Photos",
+        "alarms": "Alarms & Clock",
+        "appcompat_tooltip": "Tracks compatibility issues of old programs with new versions of Windows.",
+        "av1_tooltip": "Codec for playing AV1 video format.",
+        "avc_tooltip": "Codec for encoding video in H.264/AVC format.",
+        "bingsearch_tooltip": "Built-in Bing web search in the Start menu and taskbar.",
+        "webexperience_tooltip": "Powers the Widgets board experience in Windows 11.",
+        "crossdevice_tooltip": "Allows syncing data between PC and phone (clipboard, links).",
+        "devhome_tooltip": "Developer center introduced in Windows 11 to monitor projects.",
+        "gameassist_tooltip": "Component for in-game overlay and Windows gaming features.",
+        "heif_tooltip": "Codec for viewing HEIF format images (often used on iPhone).",
+        "hevc_tooltip": "Codec for playing high-efficiency video (H.265).",
+        "winappruntime_tooltip": "Runtime environment for modern Windows apps (Windows App SDK).",
+        "mpeg2_tooltip": "Codec for older video formats (MPEG-1 and MPEG-2).",
+        "rawimage_tooltip": "Support for viewing RAW format photos from digital cameras.",
+        "storepurchase_tooltip": "Responsible for processing payments within the Microsoft Store.",
+        "vp9_tooltip": "Codec for playing VP9 format video (popular on YouTube).",
+        "webmedia_tooltip": "Support for open media formats (Ogg, Vorbis, Theora) in the Edge browser.",
+        "webp_tooltip": "Codec for viewing images in WebP format.",
+        "widgets_tooltip": "Background process that powers Windows widgets."
+      },
+      "reboot": "After applying changes, <strong>it is recommended to restart your computer</strong>."
+    }
+  },
+  "terminal": {
+    "copy": "Copy",
+    "expand": "Expand",
+    "collapse": "Hide"
+  },
+  "notfound": {
+    "title": "404 - Page Not Found",
+    "desc": "Perhaps it was deleted or you entered the wrong address.",
+    "button": "Back to Home"
+  }
+}

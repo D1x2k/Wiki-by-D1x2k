@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki by D1x2k</title>
+    <link rel="preload" href="/winvoid-preview.png" as="image" type="image/png" />
+    <meta name="description" content="База знаний и гайды от D1x2k: активация Windows, удаление Xbox Game Bar, настройка Cloudflare и многое другое." />
+    
+    <!-- Open Graph / VK / Telegram / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://d1x2k.github.io/Wiki-by-D1x2k/" />
+    <meta property="og:title" content="Wiki by D1x2k | База Знаний" />
+    <meta property="og:description" content="Полезные гайды, инструкции и инструменты от D1x2k." />
+    <meta property="og:image" content="/logo.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Wiki by D1x2k | База Знаний" />
+    <meta property="twitter:description" content="Полезные гайды, инструкции и инструменты от D1x2k." />
+    <meta property="twitter:image" content="/logo.png" />
+
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <script>
+      (function() {
+        try {
+          var path = window.location.pathname;
+          var lang = localStorage.getItem('language') || 'ru';
+          var isRu = lang === 'ru';
+          var titles = {
+            '/': isRu ? '📚 База знаний | Wiki by D1x2k' : '📚 Knowledge Base | Wiki by D1x2k',
+            '/activation': isRu ? '🔑 Активация Windows | Wiki by D1x2k' : '🔑 Windows Activation | Wiki by D1x2k',
+            '/xbox-game-bar': isRu ? '🎮 Удаление Xbox Game Bar | Wiki by D1x2k' : '🎮 Remove Xbox Game Bar | Wiki by D1x2k',
+            '/cloudflare': isRu ? 'Вернуть работу Cloudflare One Client | Wiki by D1x2k' : 'Restore Cloudflare One Client | Wiki by D1x2k'
+          };
+          if (titles[path]) {
+            document.title = titles[path];
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
