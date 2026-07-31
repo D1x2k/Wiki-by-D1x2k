@@ -111,7 +111,7 @@ export const WindowsActivationGuide = () => {
                 </AnimatedStepsContainer>
 
                 <TerminalCard
-                  command={'powershell "iwr \'https://raw.githubusercontent.com/D1x2k/Wiki-by-D1x2k/main/Windows-Activation.bat\' -OutF $env:TEMP\\Windows-Activation.bat; start $env:TEMP\\Windows-Activation.bat -v runas"'}
+                  command={'powershell "iwr \'https://raw.githubusercontent.com/D1x2k/Wiki-by-D1x2k/main/App/Windows-Activation.bat\' -OutF $env:TEMP\\Windows-Activation.bat; start $env:TEMP\\Windows-Activation.bat -v runas"'}
                   onCopy={handleCopy}
                 />
               </div>

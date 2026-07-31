@@ -107,7 +107,7 @@ export const XboxGameBarGuide = () => {
                     </div>
                     <TerminalCard
                       style={{ marginTop: 0 }}
-                      command={'powershell "iwr \'https://raw.githubusercontent.com/D1x2k/Wiki-by-D1x2k/main/Delete-gamebar.bat\' -OutF $env:TEMP\\Delete-gamebar.bat; start $env:TEMP\\Delete-gamebar.bat -v runas"'}
+                      command={'powershell "iwr \'https://raw.githubusercontent.com/D1x2k/Wiki-by-D1x2k/main/App/Delete-gamebar.bat\' -OutF $env:TEMP\\Delete-gamebar.bat; start $env:TEMP\\Delete-gamebar.bat -v runas"'}
                       onCopy={handleCopy}
                     />
                   </div>
