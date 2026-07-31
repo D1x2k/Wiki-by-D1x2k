@@ -2,7 +2,6 @@
   <strong>Выберите язык / Choose your language:</strong><br>
   <a href="#-русский-ru">🇷🇺 Русский</a> | <a href="#-english-en">🇬🇧 English</a>
 </div>
-
 <br>
 
 
