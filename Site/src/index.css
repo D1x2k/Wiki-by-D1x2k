@@ -27,20 +27,22 @@
             font-family: var(--font-sans);
             -webkit-font-smoothing: antialiased;
             scrollbar-gutter: stable;
+            overflow-x: hidden;
+            overflow-y: scroll;
         }
 
-        html::-webkit-scrollbar {
+        ::-webkit-scrollbar {
             width: 8px;
         }
-        html::-webkit-scrollbar-track {
+        ::-webkit-scrollbar-track {
             background: #000000;
         }
-        html::-webkit-scrollbar-thumb {
+        ::-webkit-scrollbar-thumb {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 4px;
             border: 2px solid #000000;
         }
-        html::-webkit-scrollbar-thumb:hover {
+        ::-webkit-scrollbar-thumb:hover {
             background: rgba(168, 85, 247, 0.5);
         }
 
@@ -105,6 +107,7 @@
         .container {
             width: 100%;
             max-width: 800px;
+            margin: 0 auto;
             z-index: 1;
             display: flex;
             flex-direction: column;
@@ -313,6 +316,9 @@
             content: "cmd > ";
             color: #52525b;
         }
+        .command-text.no-prefix::before {
+            content: none;
+        }
 
         .copy-wrapper {
             position: absolute;
@@ -510,9 +516,14 @@
         }
 
         .kms-table tr:last-child td { border-bottom: none; }
-        .kms-table td { color: #d4d4d8; }
-        .kms-table tbody tr { transition: background 0.2s; }
-        .kms-table tbody tr:hover { background: rgba(255, 255, 255, 0.01); }
+        .kms-table td { color: #d4d4d8; transition: color 0.2s; }
+        .kms-table tbody tr { 
+            transition: background 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+        .kms-table tbody tr:hover { 
+            background: rgba(255, 255, 255, 0.03); 
+        }
         .table-th-content { display: flex; align-items: center; gap: 8px; }
 
         .toast {
