@@ -3,9 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Dashboard } from './pages/Dashboard';
 import { WindowsActivationGuide } from './pages/WindowsActivationGuide';
 import { XboxGameBarGuide } from './pages/XboxGameBarGuide';
-import { CloudflareGuide } from './pages/CloudflareGuide';
+
 import { WindowsAppsGuide } from './pages/WindowsAppsGuide';
-import { Bypass } from './pages/Bypass';
 import { NotFound } from './pages/NotFound';
 import { ParticlesBackground } from './components/ParticlesBackground';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
@@ -33,9 +32,8 @@ function AnimatedRoutes() {
         <Route path="/" element={<PageWrapper><Dashboard /></PageWrapper>} />
         <Route path="/activation" element={<PageWrapper><WindowsActivationGuide /></PageWrapper>} />
         <Route path="/xbox-game-bar" element={<PageWrapper><XboxGameBarGuide /></PageWrapper>} />
-        <Route path="/cloudflare" element={<PageWrapper><CloudflareGuide /></PageWrapper>} />
+
         <Route path="/windows-apps" element={<PageWrapper><WindowsAppsGuide /></PageWrapper>} />
-        <Route path="/bypass-instructions" element={<PageWrapper><Bypass /></PageWrapper>} />
         <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
