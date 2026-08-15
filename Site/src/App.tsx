@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Dashboard } from './pages/Dashboard';
 import { WindowsActivationGuide } from './pages/WindowsActivationGuide';
 import { XboxGameBarGuide } from './pages/XboxGameBarGuide';
-
+import { CloudflareGuide } from './pages/CloudflareGuide';
 import { WindowsAppsGuide } from './pages/WindowsAppsGuide';
 import { NotFound } from './pages/NotFound';
 import { ParticlesBackground } from './components/ParticlesBackground';
@@ -16,7 +16,6 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -15 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
-      style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
       {children}
     </motion.div>
@@ -32,7 +31,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<PageWrapper><Dashboard /></PageWrapper>} />
         <Route path="/activation" element={<PageWrapper><WindowsActivationGuide /></PageWrapper>} />
         <Route path="/xbox-game-bar" element={<PageWrapper><XboxGameBarGuide /></PageWrapper>} />
-
+        <Route path="/cloudflare" element={<PageWrapper><CloudflareGuide /></PageWrapper>} />
         <Route path="/windows-apps" element={<PageWrapper><WindowsAppsGuide /></PageWrapper>} />
         <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
       </Routes>
