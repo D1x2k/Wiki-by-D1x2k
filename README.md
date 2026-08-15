@@ -10,8 +10,7 @@
 
 # 🇷🇺 Русский (RU)
 
-<img width="1919" height="898" alt="image" src="https://github.com/user-attachments/assets/5c326841-30d4-4a24-96bd-bf914bcaf635" />
-
+<img width="1919" height="701" alt="123123" src="https://github.com/user-attachments/assets/49c3d25b-eb3b-497c-a00a-01c7e6e802b6" />
 
 ## Добро пожаловать в мою персональную базу знаний!
 Здесь я собираю, структурирую и храню полезную информацию, документацию по своим проектам, гайды и просто интересные заметки.
@@ -32,8 +31,7 @@
 
 # 🇬🇧 English (EN)
 
-<img width="1919" height="898" alt="image" src="https://github.com/user-attachments/assets/5ed31900-d7a6-46ac-8915-0ef717b3ebf0" />
-
+<img width="1919" height="701" alt="123312123" src="https://github.com/user-attachments/assets/bdb6f7b5-19c5-4703-acf9-36b78b95916a" />
 
 ## Welcome to my personal knowledge base!
 Here I collect, structure, and store useful information, documentation for my projects, guides, and just interesting notes.
