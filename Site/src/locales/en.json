@@ -214,23 +214,5 @@
     "title": "404 - Page Not Found",
     "desc": "Perhaps it was deleted or you entered the wrong address.",
     "button": "Back to Home"
-  },
-  "feedback": {
-    "button": "Suggest an Idea",
-    "title": "Feedback",
-    "desc": "Have an idea for a new guide or found a bug? Let us know!",
-    "type_label": "Topic",
-    "types": {
-      "idea": "💡 Guide Idea",
-      "bug": "🐛 Report a Bug",
-      "other": "💬 Other"
-    },
-    "message_label": "Message",
-    "message_placeholder": "Describe your idea or the issue in detail...",
-    "contact_label": "Your contact (optional)",
-    "contact_placeholder": "Email or Telegram",
-    "submit": "Submit",
-    "submitting": "Submitting...",
-    "success": "Thank you! Your message has been sent successfully."
   }
 }
