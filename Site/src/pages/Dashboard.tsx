@@ -50,18 +50,6 @@ export const Dashboard = () => {
 
         <section style={{ width: '100%' }}>
           <div className="grid-2">
-            <TiltCard to="/bypass-instructions" className="action-btn glow-card" style={{ textDecoration: 'none', height: '100%', flexDirection: 'column', gap: '20px', padding: '32px 24px', alignItems: 'flex-start', gridColumn: '1 / -1', background: 'linear-gradient(180deg, rgba(239, 68, 68, 0.05) 0%, rgba(239, 68, 68, 0.01) 100%), #040404' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <motion.svg className="btn-icon" style={{ color: '#ef4444' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" animate={{ scale: [1, 1.1, 1] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </motion.svg>
-                <span className="btn-text" style={{ fontSize: '18px' }}>{t('dashboard.cards.bypass.title')}</span>
-              </div>
-              <span style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.5, flex: 1 }}>
-                {t('dashboard.cards.bypass.desc')}
-              </span>
-            </TiltCard>
-
             <TiltCard to="/activation" className="action-btn glow-card" style={{ textDecoration: 'none', height: '100%', flexDirection: 'column', gap: '20px', padding: '32px 24px', alignItems: 'flex-start' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <motion.svg className="btn-icon" viewBox="0 0 24 24" animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></motion.svg>

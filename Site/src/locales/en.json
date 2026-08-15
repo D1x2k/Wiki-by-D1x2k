@@ -24,16 +24,7 @@
       "windows_apps": {
         "title": "Remove System Apps",
         "desc": "Script to safely remove built-in and ad-sponsored Windows apps."
-      },
-      "bypass": {
-        "title": "Block Bypass Instructions",
-        "desc": "Methods and tools for bypassing DPI blocks and accessing websites."
       }
-    },
-    "wip_bypass": {
-      "title": "Work in Progress",
-      "desc": "A detailed guide on bypassing blocks will be available here soon. Check back later!",
-      "back": "Back to Home"
     }
   },
   "cloudflare": {
