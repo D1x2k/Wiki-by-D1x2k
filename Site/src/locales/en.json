@@ -231,6 +231,8 @@
     "contact_placeholder": "Email or Telegram",
     "submit": "Submit",
     "submitting": "Submitting...",
-    "success": "Thank you! Your message has been sent successfully."
+    "success": "Thank you! Your message has been sent successfully.",
+    "error": "Failed to send the message. Please try again later.",
+    "close": "Close"
   }
 }

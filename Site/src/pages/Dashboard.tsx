@@ -21,32 +21,22 @@ export const Dashboard = () => {
           <h1 className="text-gradient-animated" style={{ marginBottom: '40px' }}>📚 {t('dashboard.title')}<br />Wiki by D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k</h1>
         </header>
 
-        <section style={{ width: '100%', marginBottom: '40px', display: 'flex', justifyContent: 'center' }}>
+        <motion.section
+          className="feedback-section"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.4 }}
+        >
           <motion.button
             onClick={() => setIsFeedbackOpen(true)}
+            className="feedback-btn"
             whileHover={{ scale: 1.05, y: -2, boxShadow: '0 8px 32px rgba(168, 85, 247, 0.4)' }}
             whileTap={{ scale: 0.95 }}
-            style={{
-              padding: '16px 32px',
-              background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.2))',
-              border: '1px solid rgba(168, 85, 247, 0.4)',
-              borderRadius: '20px',
-              color: '#d8b4fe',
-              fontSize: '18px',
-              fontWeight: 600,
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-              boxShadow: '0 4px 16px rgba(168, 85, 247, 0.1)',
-              backdropFilter: 'blur(10px)',
-              transition: 'all 0.3s ease'
-            }}
           >
-            <span style={{ fontSize: '24px' }}>💡</span>
+            <span className="feedback-btn-icon">💡</span>
             {t('feedback.button')}
           </motion.button>
-        </section>
+        </motion.section>
 
         <section style={{ width: '100%' }}>
           <div className="grid-2">
