@@ -10,7 +10,8 @@
 
 # 🇷🇺 Русский (RU)
 
-<img width="1919" height="898" alt="image" src="https://github.com/user-attachments/assets/5c326841-30d4-4a24-96bd-bf914bcaf635" />
+<img width="1916" height="780" alt="Снимок экрана 2026-08-22 202800" src="https://github.com/user-attachments/assets/0cae5d26-6662-42d5-90c1-4dd6f82f8684" />
+
 
 
 ## Добро пожаловать в мою персональную базу знаний!
@@ -32,7 +33,8 @@
 
 # 🇬🇧 English (EN)
 
-<img width="1919" height="898" alt="image" src="https://github.com/user-attachments/assets/5ed31900-d7a6-46ac-8915-0ef717b3ebf0" />
+<img width="1917" height="788" alt="Снимок экрана 2026-08-22 203008" src="https://github.com/user-attachments/assets/96552871-d7eb-48e7-872b-20d5ba0fc79a" />
+
 
 
 ## Welcome to my personal knowledge base!
