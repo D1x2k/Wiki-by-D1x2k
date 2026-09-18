@@ -10,7 +10,8 @@
 
 # 🇷🇺 Русский (RU)
 
-<img width="1916" height="780" alt="Снимок экрана 2026-08-22 202800" src="https://github.com/user-attachments/assets/0cae5d26-6662-42d5-90c1-4dd6f82f8684" />
+<img width="1916" height="776" alt="image" src="https://github.com/user-attachments/assets/4ba863af-8f58-4fa7-95d1-359c38c08cfd" />
+
 
 
 
@@ -33,7 +34,8 @@
 
 # 🇬🇧 English (EN)
 
-<img width="1917" height="788" alt="Снимок экрана 2026-08-22 203008" src="https://github.com/user-attachments/assets/96552871-d7eb-48e7-872b-20d5ba0fc79a" />
+<img width="1915" height="785" alt="image" src="https://github.com/user-attachments/assets/79d2a1b8-19dd-4d13-a290-d6da928e463e" />
+
 
 
 
