@@ -32,9 +32,9 @@ export const AnimatedStepsContainer = ({ children, className = "", style }: { ch
   );
 };
 
-export const AnimatedStepItem = ({ children, style }: { children: ReactNode, style?: React.CSSProperties }) => {
+export const AnimatedStepItem = ({ children, style, className = "" }: { children: ReactNode, style?: React.CSSProperties, className?: string }) => {
   return (
-    <motion.div className="step-item" style={style} variants={itemVariants}>
+    <motion.div className={`step-item ${className}`.trim()} style={style} variants={itemVariants}>
       {children}
     </motion.div>
   );

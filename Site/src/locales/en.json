@@ -24,6 +24,10 @@
       "windows_apps": {
         "title": "Remove System Apps",
         "desc": "Script to safely remove built-in and ad-sponsored Windows apps."
+      },
+      "yandex_music": {
+        "title": "Yandex Music",
+        "desc": "Quickly clear liked songs or bulk add tracks to a playlist via developer console."
       }
     }
   },
@@ -221,18 +225,46 @@
     "desc": "Have an idea for a new guide or found a bug? Let us know!",
     "type_label": "Topic",
     "types": {
-      "idea": "💡 Guide Idea",
-      "bug": "🐛 Report a Bug",
+      "idea": "💡 Idea",
+      "bug": "🐛 Bug",
       "other": "💬 Other"
     },
     "message_label": "Message",
     "message_placeholder": "Describe your idea or the issue in detail...",
-    "contact_label": "Your contact (optional)",
-    "contact_placeholder": "Email or Telegram",
+    "contact_label": "Contact (optional)",
+    "contact_placeholder": "Telegram or Email",
     "submit": "Submit",
     "submitting": "Submitting...",
     "success": "Thank you! Your message has been sent successfully.",
     "error": "Failed to send the message. Please try again later.",
     "close": "Close"
+  },
+  "yandex_music": {
+    "title": "Yandex Music",
+    "subtitle": "Playlist automation via browser developer console",
+    "tabs": {
+      "unlike": "🗑️ Clear \"Liked Songs\"",
+      "like": "❤️ Add all to \"Liked Songs\""
+    },
+    "unlike": {
+      "title": "Remove all tracks from \"Liked Songs\"",
+      "desc": "Yandex Music does not have a bulk clear button for liked tracks. This script automatically goes through all tracks and unlikes them.",
+      "step1": "Open the web version of <1>Yandex Music</1> and go to <strong>Collection → Liked</strong>.",
+      "step2": "Open developer tools: press <strong>F12</strong> (or <strong>Ctrl + Shift + I</strong>) and select the <strong>Console</strong> tab.",
+      "step3": "If your browser blocks pasting, type <1>allow pasting</1> into the console and hit <strong>Enter</strong>.",
+      "step4": "Copy the script below, paste it into the console, and press <strong>Enter</strong>. The script will safely remove tracks with an interval."
+    },
+    "like": {
+      "title": "Bulk add tracks to \"Liked Songs\"",
+      "desc": "Useful when importing music from Spotify, Apple Music, or saving an entire album / public playlist to your personal collection.",
+      "step1": "Open the web version of <1>Yandex Music</1> and open the <strong>playlist or album</strong> you want to like.",
+      "step2": "Open developer tools: press <strong>F12</strong> (or <strong>Ctrl + Shift + I</strong>) and select the <strong>Console</strong> tab.",
+      "step3": "If your browser blocks pasting, type <1>allow pasting</1> into the console and hit <strong>Enter</strong>.",
+      "step4": "Copy the script below, paste it into the console, and press <strong>Enter</strong>. The script will automatically like every track."
+    },
+    "tips_title": "💡 Useful Tips & Details",
+    "tip_speed": "<strong>Fast & reliable:</strong> the script uses optimized delays (120ms between clicks and 600ms for fetching) so actions register properly without rate limits.",
+    "tip_scroll": "<strong>Auto scroll-container detection:</strong> the script automatically finds Yandex Music's scroll element and progressively renders virtualized track rows.",
+    "tip_stop": "<strong>How to stop:</strong> the script will automatically finish once all tracks are processed. To abort at any moment, simply refresh the page (<strong>F5</strong>)."
   }
 }

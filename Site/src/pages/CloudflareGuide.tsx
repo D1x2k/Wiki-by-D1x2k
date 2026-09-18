@@ -10,30 +10,49 @@ import { SmartTooltip } from '../components/SmartTooltip';
 const MultilineCodeCard = ({ code, onCopy, expandable = false }: { code: string, onCopy: () => void, expandable?: boolean }) => {
   const [isExpanded, setIsExpanded] = useState(!expandable);
   const [justCopied, setJustCopied] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslation();
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code).then(() => {
+      onCopy();
+      setJustCopied(true);
+      setTimeout(() => setJustCopied(false), 1200);
+    }).catch(err => {
+      console.error('Ошибка копирования: ', err);
+    });
+  };
+
   return (
-    <div className={`glow-card ${justCopied ? 'copy-success-glow' : ''}`} style={{ 
-      position: 'relative', 
-      background: '#040404', 
-      borderRadius: '12px', 
-      marginTop: '14px',
-      overflow: 'hidden',
-      transition: 'all 0.3s ease',
-      border: '1px solid rgba(255, 255, 255, 0.04)'
-    }}>
+    <div 
+      className={`glow-card ${justCopied ? 'copy-success-glow' : ''}`} 
+      style={{ 
+        position: 'relative', 
+        background: '#040404', 
+        borderRadius: '12px', 
+        marginTop: '14px', 
+        overflow: 'hidden', 
+        transition: 'all 0.3s ease', 
+        border: '1px solid rgba(255, 255, 255, 0.04)',
+        cursor: 'pointer'
+      }}
+      onClick={handleCopy}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div style={{ 
         maxHeight: isExpanded ? '2000px' : '150px', 
-        overflowY: 'hidden',
-        padding: '18px 20px',
-        paddingBottom: expandable ? '48px' : '18px',
-        paddingRight: expandable ? '20px' : '120px',
-        fontFamily: 'var(--font-mono)',
-        fontSize: '13px',
-        color: '#e4e4e7',
-        whiteSpace: 'pre-wrap',
-        lineHeight: '1.6',
-        transition: 'max-height 0.4s ease'
+        overflowY: 'hidden', 
+        padding: '18px 20px', 
+        paddingBottom: expandable ? '48px' : '18px', 
+        paddingRight: expandable ? '20px' : '120px', 
+        fontFamily: 'var(--font-mono)', 
+        fontSize: '13px', 
+        color: '#e4e4e7', 
+        whiteSpace: 'pre-wrap', 
+        lineHeight: '1.6', 
+        transition: 'max-height 0.4s ease',
+        userSelect: 'none'
       }}>
         {code}
       </div>
@@ -59,40 +78,48 @@ const MultilineCodeCard = ({ code, onCopy, expandable = false }: { code: string,
         zIndex: 10
       }}>
         {expandable && (
-          <button onClick={() => setIsExpanded(!isExpanded)} style={{
-            background: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            color: 'var(--text-secondary)',
+          <button 
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsExpanded(!isExpanded);
+            }} 
+            style={{
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              color: 'var(--text-secondary)',
+              padding: '6px 12px',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontSize: '12px',
+              transition: 'all 0.2s'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-secondary)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'; }}
+          >
+            {isExpanded ? t('terminal.collapse') : t('terminal.expand')}
+          </button>
+        )}
+        <button 
+          type="button"
+          onClick={(e) => { 
+            e.stopPropagation();
+            handleCopy();
+          }} 
+          style={{
+            background: isHovered ? 'rgba(168, 85, 247, 0.15)' : 'rgba(255, 255, 255, 0.03)',
+            border: isHovered ? '1px solid rgba(168, 85, 247, 0.3)' : '1px solid rgba(255, 255, 255, 0.04)',
+            color: isHovered ? '#d8b4fe' : 'var(--text-secondary)',
+            boxShadow: isHovered ? '0 0 10px rgba(168, 85, 247, 0.2)' : 'none',
             padding: '6px 12px',
             borderRadius: '6px',
             cursor: 'pointer',
             fontSize: '12px',
             transition: 'all 0.2s'
           }}
-          onMouseOver={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
-          onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-secondary)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'; }}
-          >
-            {isExpanded ? t('terminal.collapse') : t('terminal.expand')}
-          </button>
-        )}
-        <button onClick={() => { 
-          navigator.clipboard.writeText(code); 
-          onCopy(); 
-          setJustCopied(true);
-          setTimeout(() => setJustCopied(false), 1200);
-        }} style={{
-          background: 'rgba(255, 255, 255, 0.03)',
-          border: '1px solid rgba(255, 255, 255, 0.04)',
-          color: 'var(--text-secondary)',
-          padding: '6px 12px',
-          borderRadius: '6px',
-          cursor: 'pointer',
-          fontSize: '12px',
-          transition: 'all 0.2s'
-        }}
-        onMouseOver={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'; }}
-        onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-secondary)'; e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'; }}
-        >{t('terminal.copy')}</button>
+        >
+          {t('terminal.copy')}
+        </button>
       </div>
     </div>
   );

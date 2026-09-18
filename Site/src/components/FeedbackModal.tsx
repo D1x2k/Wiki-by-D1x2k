@@ -77,164 +77,155 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <>
+        <motion.div
+          className="modal-wrapper"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.22, ease: 'easeOut' }}
+        >
           <motion.div
             className="modal-overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.22, ease: 'easeOut' }}
             onClick={onClose}
           />
-          <div className="modal-wrapper">
-            <motion.div
-              className="modal-card glow-card"
-              role="dialog"
-              aria-modal="true"
-              aria-label={t('feedback.title')}
-              initial={{ opacity: 0, scale: 0.92, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+          <motion.div
+            className="modal-card"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('feedback.title')}
+            initial={{ opacity: 0, y: -28, filter: 'blur(12px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, y: -20, filter: 'blur(10px)' }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <motion.button
+              type="button"
+              onClick={onClose}
+              className="modal-close"
+              aria-label={t('feedback.close')}
+              whileHover={{ rotate: 90, scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.2 }}
             >
-              <motion.button
-                type="button"
-                onClick={onClose}
-                className="modal-close"
-                aria-label={t('feedback.close')}
-                whileHover={{ rotate: 90, scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                &times;
-              </motion.button>
+              &times;
+            </motion.button>
 
-              <motion.h2
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.05 }}
-                className="text-gradient-animated modal-title"
-              >
-                {t('feedback.title')}
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.1 }}
-                className="modal-desc"
-              >
-                {t('feedback.desc')}
-              </motion.p>
+            <h2 className="modal-title">
+              {t('feedback.title')}
+            </h2>
+            <p className="modal-desc">
+              {t('feedback.desc')}
+            </p>
 
-              {state === 'success' ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="modal-success"
-                >
-                  <span style={{ fontSize: '24px' }}>🎉</span>
-                  <span>{t('feedback.success')}</span>
-                </motion.div>
-              ) : state === 'error' ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="modal-error"
-                >
-                  <span style={{ fontSize: '24px' }}>⚠️</span>
-                  <span>{t('feedback.error')}</span>
-                </motion.div>
-              ) : (
-                <motion.form
-                  onSubmit={handleSubmit}
-                  className="modal-form"
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1, transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
-                  }}
-                >
-                  <motion.div
-                    className="form-field"
-                    variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
-                  >
-                    <label className="form-label">{t('feedback.type_label')}</label>
-                    <div className="form-types">
-                      {(['idea', 'bug', 'other'] as const).map((opt) => (
+            {state === 'success' ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.92 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.25, ease: 'easeOut' }}
+                className="modal-success"
+              >
+                <span style={{ fontSize: '24px' }}>🎉</span>
+                <span>{t('feedback.success')}</span>
+              </motion.div>
+            ) : state === 'error' ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.92 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.25, ease: 'easeOut' }}
+                className="modal-error"
+              >
+                <span style={{ fontSize: '24px' }}>⚠️</span>
+                <span>{t('feedback.error')}</span>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="modal-form">
+                <div className="form-field">
+                  <label className="form-label">{t('feedback.type_label')}</label>
+                  <div className="form-types">
+                    {(['idea', 'bug', 'other'] as const).map((opt) => {
+                      const isActive = type === opt;
+                      return (
                         <motion.button
                           key={opt}
                           type="button"
                           onClick={() => setType(opt)}
-                          className={`type-btn ${type === opt ? 'active' : ''}`}
-                          whileHover={{ scale: 1.02, y: -1 }}
+                          className={`type-btn ${isActive ? 'active' : ''}`}
+                          whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.97 }}
+                          transition={{ duration: 0.15 }}
                         >
-                          {t(`feedback.types.${opt}`)}
+                          {isActive && (
+                            <motion.div
+                              layoutId="activeFeedbackType"
+                              className="type-btn-active-bg"
+                              transition={{ type: 'spring', stiffness: 450, damping: 35 }}
+                            />
+                          )}
+                          <span className="type-btn-text">{t(`feedback.types.${opt}`)}</span>
                         </motion.button>
-                      ))}
-                    </div>
-                  </motion.div>
+                      );
+                    })}
+                  </div>
+                </div>
 
-                  <motion.div
-                    className="form-field"
-                    variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
-                  >
-                    <label htmlFor="message" className="form-label">
-                      {t('feedback.message_label')}
-                    </label>
-                    <textarea
-                      id="message"
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      placeholder={t('feedback.message_placeholder')}
-                      required
-                      className="form-textarea custom-scrollbar"
-                    />
-                  </motion.div>
+                <div className="form-field">
+                  <label htmlFor="message" className="form-label">
+                    {t('feedback.message_label')}
+                  </label>
+                  <textarea
+                    id="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder={t('feedback.message_placeholder')}
+                    required
+                    className="form-textarea custom-scrollbar"
+                  />
+                </div>
 
-                  <motion.div
-                    className="form-field"
-                    variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
-                  >
-                    <label htmlFor="contact" className="form-label">
-                      {t('feedback.contact_label')}
-                    </label>
-                    <input
-                      id="contact"
-                      type="text"
-                      value={contact}
-                      onChange={(e) => setContact(e.target.value)}
-                      placeholder={t('feedback.contact_placeholder')}
-                      className="form-input"
-                    />
-                  </motion.div>
+                <div className="form-field">
+                  <label htmlFor="contact" className="form-label">
+                    {t('feedback.contact_label')}
+                  </label>
+                  <input
+                    id="contact"
+                    type="text"
+                    value={contact}
+                    onChange={(e) => setContact(e.target.value)}
+                    placeholder={t('feedback.contact_placeholder')}
+                    className="form-input"
+                  />
+                </div>
 
-                  <motion.button
-                    type="submit"
-                    className="submit-btn"
-                    variants={{ hidden: { opacity: 0, y: 8 }, visible: { opacity: 1, y: 0 } }}
-                    disabled={!canSubmit}
-                    whileHover={canSubmit ? { scale: 1.02, y: -2, boxShadow: '0 8px 30px rgba(168, 85, 247, 0.6)' } : {}}
-                    whileTap={canSubmit ? { scale: 0.98 } : {}}
-                  >
-                    {state === 'submitting' ? (
-                      <>
-                        <motion.span
-                          className="spinner"
-                          animate={{ rotate: 360 }}
-                          transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
-                        />
-                        {t('feedback.submitting')}
-                      </>
-                    ) : (
-                      t('feedback.submit')
-                    )}
-                  </motion.button>
-                </motion.form>
-              )}
-            </motion.div>
-          </div>
-        </>
+                <motion.button
+                  type="submit"
+                  className="submit-btn"
+                  disabled={!canSubmit}
+                  whileHover={canSubmit ? { scale: 1.02, y: -2, boxShadow: '0 8px 32px rgba(168, 85, 247, 0.65)' } : {}}
+                  whileTap={canSubmit ? { scale: 0.98 } : {}}
+                  transition={{ duration: 0.15 }}
+                >
+                  {state === 'submitting' ? (
+                    <>
+                      <motion.span
+                        className="spinner"
+                        animate={{ rotate: 360 }}
+                        transition={{ repeat: Infinity, duration: 0.8, ease: 'linear' }}
+                      />
+                      {t('feedback.submitting')}
+                    </>
+                  ) : (
+                    t('feedback.submit')
+                  )}
+                </motion.button>
+              </form>
+            )}
+          </motion.div>
+        </motion.div>
       )}
     </AnimatePresence>
   );

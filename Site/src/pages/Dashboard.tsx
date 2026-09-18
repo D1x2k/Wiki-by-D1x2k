@@ -70,13 +70,17 @@ export const Dashboard = () => {
               </span>
             </TiltCard>
 
-            <TiltCard to="/windows-apps" className="action-btn glow-card" style={{ textDecoration: 'none', height: '100%', flexDirection: 'column', gap: '20px', padding: '32px 24px', alignItems: 'flex-start' }}>
+            <TiltCard to="/yandex-music" className="action-btn glow-card" style={{ textDecoration: 'none', height: '100%', flexDirection: 'column', gap: '20px', padding: '32px 24px', alignItems: 'flex-start' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <motion.svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></motion.svg>
-                <span className="btn-text" style={{ fontSize: '18px' }}>{t('dashboard.cards.windows_apps.title')}</span>
+                <motion.svg className="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" animate={{ scale: [1, 1.15, 1] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>
+                  <path d="M9 18V5l12-2v13" />
+                  <circle cx="6" cy="18" r="3" />
+                  <circle cx="18" cy="16" r="3" />
+                </motion.svg>
+                <span className="btn-text" style={{ fontSize: '18px' }}>{t('dashboard.cards.yandex_music.title')}</span>
               </div>
               <span style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.5, flex: 1 }}>
-                {t('dashboard.cards.windows_apps.desc')}
+                {t('dashboard.cards.yandex_music.desc')}
               </span>
             </TiltCard>
           </div>

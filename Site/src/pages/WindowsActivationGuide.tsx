@@ -101,19 +101,19 @@ export const WindowsActivationGuide = () => {
                   <AnimatedStepItem>
                     <div className="step-number">02</div>
                     <div className="step-content">
-                      <div className="step-title-main">
+                      <div className="step-title-main" style={{ marginBottom: '14px' }}>
                         <Trans i18nKey="windows.auto.step2">
                           Кликните по блоку ниже, чтобы скопировать автоматизированную команду. Вставьте её в консоль с помощью <b>Ctrl + V</b> и нажмите кнопку <b>Enter</b>.
                         </Trans>
                       </div>
+                      <TerminalCard
+                        style={{ marginTop: 0 }}
+                        command={'powershell "iwr \'https://raw.githubusercontent.com/D1x2k/Wiki-by-D1x2k/main/App/Windows-Activation.bat\' -OutF $env:TEMP\\Windows-Activation.bat; start $env:TEMP\\Windows-Activation.bat -v runas"'}
+                        onCopy={handleCopy}
+                      />
                     </div>
                   </AnimatedStepItem>
                 </AnimatedStepsContainer>
-
-                <TerminalCard
-                  command={'powershell "iwr \'https://raw.githubusercontent.com/D1x2k/Wiki-by-D1x2k/main/App/Windows-Activation.bat\' -OutF $env:TEMP\\Windows-Activation.bat; start $env:TEMP\\Windows-Activation.bat -v runas"'}
-                  onCopy={handleCopy}
-                />
               </div>
 
               <div style={{ marginTop: '48px', marginBottom: '48px' }}>
