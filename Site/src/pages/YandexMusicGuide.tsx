@@ -27,6 +27,7 @@ const MultilineCodeCard = ({ code, onCopy, expandable = false }: { code: string,
       className={`glow-card ${justCopied ? 'copy-success-glow' : ''}`} 
       style={{ 
         position: 'relative', 
+        zIndex: 2,
         background: '#040404', 
         borderRadius: '12px', 
         marginTop: '14px', 
@@ -217,11 +218,8 @@ export const YandexMusicGuide = () => {
     console.log(\`Готово! Всего удалено треков: \${removedCount}\`);
 })();`;
 
-  const likeScript = `(async function addLikesReliablyFast() {
-    console.log("Запуск быстрого добавления лайков...");
-    let addedCount = 0;
-    const handledTrackIds = new Set();
-    let idleRounds = 0;
+  const likeScript = `(async function addLikesFromBottomToTop() {
+    console.log("Запуск добавления лайков снизу вверх...");
 
     const getScroller = () => {
         const anyItem = document.querySelector('[role="row"], [class*="Track"], [class*="track"]');
@@ -237,10 +235,39 @@ export const YandexMusicGuide = () => {
     };
 
     const scroller = getScroller();
+    const isWindow = scroller === window;
+
+    console.log("⏳ Проматываем плейлист до конца...");
+    let unchangedRounds = 0;
+
+    while (unchangedRounds < 3) {
+        const currentScroll = isWindow ? window.scrollY : scroller.scrollTop;
+        if (isWindow) {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'instant' });
+        } else {
+            scroller.scrollTop = scroller.scrollHeight;
+        }
+
+        await new Promise(r => setTimeout(r, 450));
+
+        const newScroll = isWindow ? window.scrollY : scroller.scrollTop;
+        if (newScroll === currentScroll) {
+            unchangedRounds++;
+        } else {
+            unchangedRounds = 0;
+        }
+    }
+
+    console.log("✅ Достигли низа. Начинаем проставлять лайки снизу вверх...");
+
+    let addedCount = 0;
+    const handledTrackIds = new Set();
+    let idleRounds = 0;
 
     while (idleRounds < 4) {
         const trackRows = Array.from(document.querySelectorAll('[role="row"], [class*="Track_root"], [class*="track-row"]'))
-            .filter(row => !row.closest('[class*="PlayerBar"], [class*="player"]'));
+            .filter(row => !row.closest('[class*="PlayerBar"], [class*="player"]'))
+            .reverse();
 
         let clickedInRound = 0;
 
@@ -278,16 +305,16 @@ export const YandexMusicGuide = () => {
             idleRounds = 0;
         }
 
-        if (scroller.scrollBy) {
-            scroller.scrollBy({ top: 600, behavior: 'instant' });
+        if (isWindow) {
+            window.scrollBy({ top: -600, behavior: 'instant' });
         } else {
-            window.scrollBy({ top: 600, behavior: 'instant' });
+            scroller.scrollBy({ top: -600, behavior: 'instant' });
         }
 
-        await new Promise(r => setTimeout(r, 600));
+        await new Promise(r => setTimeout(r, 550));
     }
 
-    console.log(\`Готово! Всего добавлено лайков: \${addedCount}\`);
+    console.log(\`Готово! Всего добавлено лайков снизу вверх: \${addedCount}\`);
 })();`;
 
   return (
@@ -309,46 +336,18 @@ export const YandexMusicGuide = () => {
         <section id="guide-content" className="scroll-reveal content-section" style={{ minHeight: '60vh' }}>
           
           {/* Переключатель вкладок */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginBottom: '32px', background: 'rgba(255, 255, 255, 0.03)', padding: '6px', borderRadius: '14px', width: 'fit-content', margin: '0 auto 32px auto', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+          <div className="tabs-switcher">
             <button
               type="button"
               onClick={() => setActiveTab('unlike')}
-              style={{
-                padding: '12px 20px',
-                borderRadius: '10px',
-                border: 'none',
-                background: activeTab === 'unlike' ? 'linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(128, 80, 255, 0.15))' : 'transparent',
-                color: activeTab === 'unlike' ? '#fff' : 'var(--text-secondary)',
-                boxShadow: activeTab === 'unlike' ? '0 0 20px rgba(168, 85, 247, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)' : 'none',
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: activeTab === 'unlike' ? 'rgba(168, 85, 247, 0.5)' : 'transparent',
-                cursor: 'pointer',
-                fontWeight: 600,
-                fontSize: '14px',
-                transition: 'all 0.25s ease'
-              }}
+              className={`tab-btn ${activeTab === 'unlike' ? 'active' : ''}`}
             >
               {t('yandex_music.tabs.unlike')}
             </button>
             <button
               type="button"
               onClick={() => setActiveTab('like')}
-              style={{
-                padding: '12px 20px',
-                borderRadius: '10px',
-                border: 'none',
-                background: activeTab === 'like' ? 'linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(128, 80, 255, 0.15))' : 'transparent',
-                color: activeTab === 'like' ? '#fff' : 'var(--text-secondary)',
-                boxShadow: activeTab === 'like' ? '0 0 20px rgba(168, 85, 247, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)' : 'none',
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: activeTab === 'like' ? 'rgba(168, 85, 247, 0.5)' : 'transparent',
-                cursor: 'pointer',
-                fontWeight: 600,
-                fontSize: '14px',
-                transition: 'all 0.25s ease'
-              }}
+              className={`tab-btn ${activeTab === 'like' ? 'active' : ''}`}
             >
               {t('yandex_music.tabs.like')}
             </button>

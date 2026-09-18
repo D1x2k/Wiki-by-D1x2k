@@ -81,11 +81,27 @@
             position: relative;
         }
 
+        /* Фоновые частицы (строго в самом низу архитектуры) */
+        #particles-layer,
+        #tsparticles,
+        #tsparticles canvas,
+        .tsparticles-canvas-el {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: -9999 !important;
+            pointer-events: none !important;
+        }
+
         #root {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .no-select {
@@ -109,7 +125,8 @@
         .container {
             width: 100%;
             max-width: 800px;
-            z-index: 1;
+            position: relative;
+            z-index: 2;
             display: flex;
             flex-direction: column;
         }
@@ -280,6 +297,7 @@
 
         .terminal-card {
             position: relative;
+            z-index: 2;
             font-family: var(--font-mono);
             font-size: 13px;
             background: #040404;
@@ -392,11 +410,12 @@
 
         .step-item {
             position: relative;
+            z-index: 2;
             display: flex;
             gap: 22px;
             align-items: flex-start;
             padding: 22px 24px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.008) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.008) 100%), #060608;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.07);
@@ -422,7 +441,7 @@
 
         .step-item:hover {
             border-color: rgba(168, 85, 247, 0.35);
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, rgba(255, 255, 255, 0.015) 100%);
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.06) 0%, rgba(255, 255, 255, 0.015) 100%), #08080c;
             transform: translateY(-2px);
             box-shadow: 0 10px 32px -8px rgba(168, 85, 247, 0.2), 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
@@ -598,7 +617,7 @@
             position: fixed;
             bottom: 32px;
             right: 32px;
-            background: rgba(20, 20, 25, 0.85);
+            background: rgba(14, 14, 18, 0.98);
             color: #ffffff;
             padding: 12px 20px;
             border-radius: 12px;
@@ -613,7 +632,7 @@
             transform: translateY(8px) scale(0.98);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             pointer-events: none;
-            z-index: 100;
+            z-index: 10000;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -817,9 +836,51 @@
   margin-bottom: 48px;
 }
 
+/* Переключатель вкладок (строго непрозрачный фон от частиц) */
+.tabs-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 32px auto;
+  background: #08080b;
+  padding: 6px;
+  border-radius: 14px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 5;
+}
+
+.tab-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.35), rgba(128, 80, 255, 0.2)), #120d1f;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(168, 85, 247, 0.55);
+}
+
 .feedback-btn {
   padding: 16px 32px;
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.2));
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.2)), #07070a;
   border: 1px solid rgba(168, 85, 247, 0.4);
   border-radius: 20px;
   color: var(--accent-soft);
@@ -829,10 +890,12 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.1);
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .feedback-btn-icon {
@@ -848,7 +911,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 99999;
   padding: 20px;
   pointer-events: auto;
 }
@@ -868,7 +931,7 @@
   z-index: 2;
   width: 100%;
   max-width: 520px;
-  background: linear-gradient(180deg, rgba(20, 15, 30, 0.92) 0%, rgba(8, 8, 12, 0.97) 100%);
+  background: linear-gradient(180deg, rgba(20, 15, 30, 0.94) 0%, rgba(8, 8, 12, 0.98) 100%), #08080c;
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   border: 1px solid rgba(168, 85, 247, 0.28);
@@ -991,7 +1054,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
-  background: rgba(255, 255, 255, 0.03);
+  background: #09090c;
   padding: 4px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -1030,7 +1093,7 @@
   position: absolute;
   inset: 0;
   border-radius: 9px;
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(128, 80, 255, 0.18) 100%);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(128, 80, 255, 0.18) 100%), #120d1f;
   border: 1px solid rgba(168, 85, 247, 0.55);
   box-shadow: 0 0 16px rgba(168, 85, 247, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   z-index: 1;

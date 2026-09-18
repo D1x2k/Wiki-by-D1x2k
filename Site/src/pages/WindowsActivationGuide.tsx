@@ -52,33 +52,19 @@ export const WindowsActivationGuide = () => {
 
         <section id="guide-content" className="scroll-reveal content-section" style={{ minHeight: '60vh' }}>
 
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '24px', background: 'rgba(255, 255, 255, 0.03)', padding: '6px', borderRadius: '12px', width: 'fit-content', margin: '0 auto 24px auto' }}>
+          <div className="tabs-switcher">
             <button
+              type="button"
               onClick={() => setActiveTab('auto')}
-              style={{
-                padding: '10px 24px',
-                borderRadius: '8px',
-                border: 'none',
-                background: activeTab === 'auto' ? 'rgba(255,255,255,0.1)' : 'transparent',
-                color: activeTab === 'auto' ? '#fff' : 'var(--text-secondary)',
-                cursor: 'pointer',
-                fontWeight: 500,
-                transition: 'all 0.2s ease'
-              }}>
+              className={`tab-btn ${activeTab === 'auto' ? 'active' : ''}`}
+            >
               {t('windows.tabs.auto')}
             </button>
             <button
+              type="button"
               onClick={() => setActiveTab('manual')}
-              style={{
-                padding: '10px 24px',
-                borderRadius: '8px',
-                border: 'none',
-                background: activeTab === 'manual' ? 'rgba(255,255,255,0.1)' : 'transparent',
-                color: activeTab === 'manual' ? '#fff' : 'var(--text-secondary)',
-                cursor: 'pointer',
-                fontWeight: 500,
-                transition: 'all 0.2s ease'
-              }}>
+              className={`tab-btn ${activeTab === 'manual' ? 'active' : ''}`}
+            >
               {t('windows.tabs.manual')}
             </button>
           </div>

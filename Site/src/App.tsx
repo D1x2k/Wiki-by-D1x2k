@@ -17,6 +17,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -15 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
+      style={{ position: 'relative', zIndex: 1, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
       {children}
     </motion.div>
@@ -44,11 +45,11 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <ParticlesBackground />
       <div className="header-controls">
         <SocialLinks />
         <LanguageSwitcher />
       </div>
-      <ParticlesBackground />
       <AnimatedRoutes />
     </Router>
   );
