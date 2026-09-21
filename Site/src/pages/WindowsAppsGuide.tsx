@@ -9,6 +9,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useGlowEffect } from '../hooks/useGlowEffect';
 import { AnimatedStepsContainer, AnimatedStepItem, AnimatedGroupContainer, AnimatedGroupItem } from '../components/AnimatedSteps';
 import { SmartTooltip } from '../components/SmartTooltip';
+import { TabsSwitcher } from '../components/TabsSwitcher';
 
 const appsList = [
   { key: 'copilot', cmd: 'Get-AppxPackage *Copilot* -AllUsers | Remove-AppxPackage' },
@@ -107,22 +108,15 @@ export const WindowsAppsGuide = () => {
 
         <section id="guide-content" className="scroll-reveal content-section" style={{ minHeight: '60vh' }}>
 
-          <div className="tabs-switcher">
-            <button
-              type="button"
-              onClick={() => setActiveTab('auto')}
-              className={`tab-btn ${activeTab === 'auto' ? 'active' : ''}`}
-            >
-              {t('windows_apps.tabs.auto')}
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('manual')}
-              className={`tab-btn ${activeTab === 'manual' ? 'active' : ''}`}
-            >
-              {t('windows_apps.tabs.manual')}
-            </button>
-          </div>
+          <TabsSwitcher
+            activeTab={activeTab}
+            onChange={setActiveTab}
+            layoutId="windowsAppsTabs"
+            tabs={[
+              { id: 'auto', label: t('windows_apps.tabs.auto') },
+              { id: 'manual', label: t('windows_apps.tabs.manual') },
+            ]}
+          />
 
           {activeTab === 'auto' && (
             <div className="tab-content" style={{ animation: 'fade-in 0.3s ease-out' }}>
@@ -215,8 +209,8 @@ export const WindowsAppsGuide = () => {
                     </div>
                   </div>
                 </AnimatedStepItem>
-                <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-                  <div className="step-number" style={{ marginTop: '4px' }}>02</div>
+                <AnimatedStepItem>
+                  <div className="step-number">02</div>
                   <div className="step-content" style={{ width: '100%' }}>
                     <div className="step-title-main" style={{ marginBottom: '16px' }}>
                       <Trans i18nKey="windows_apps.manual.step2">

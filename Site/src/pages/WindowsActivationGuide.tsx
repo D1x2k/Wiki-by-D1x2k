@@ -62,8 +62,8 @@ export const WindowsActivationGuide = () => {
                   </div>
                 </div>
               </AnimatedStepItem>
-              <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-                <div className="step-number" style={{ marginTop: '4px' }}>02</div>
+              <AnimatedStepItem>
+                <div className="step-number">02</div>
                 <div className="step-content">
                   <div className="step-title-main" style={{ marginBottom: '16px' }}>
                     <Trans i18nKey="windows.manual.step2">

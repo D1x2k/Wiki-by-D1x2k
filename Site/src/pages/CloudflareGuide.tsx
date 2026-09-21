@@ -228,8 +228,8 @@ Warp4 = "cloudflare.net"`;
               </div>
             </AnimatedStepItem>
 
-            <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-              <div className="step-number" style={{ marginTop: '4px' }}>02</div>
+            <AnimatedStepItem>
+              <div className="step-number">02</div>
               <div className="step-content">
                 <div className="step-title-main" style={{ marginBottom: '16px' }}>
                   <Trans i18nKey="cloudflare.step2.title">
@@ -240,8 +240,8 @@ Warp4 = "cloudflare.net"`;
               </div>
             </AnimatedStepItem>
 
-            <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-              <div className="step-number" style={{ marginTop: '4px' }}>03</div>
+            <AnimatedStepItem>
+              <div className="step-number">03</div>
               <div className="step-content">
                 <div className="step-title-main" style={{ marginBottom: '16px' }}>
                   <Trans i18nKey="cloudflare.step3.title">

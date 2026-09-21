@@ -8,6 +8,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useGlowEffect } from '../hooks/useGlowEffect';
 import { AnimatedStepsContainer, AnimatedStepItem, AnimatedGroupContainer, AnimatedGroupItem } from '../components/AnimatedSteps';
 import { SmartTooltip } from '../components/SmartTooltip';
+import { TabsSwitcher } from '../components/TabsSwitcher';
 
 export const XboxGameBarGuide = () => {
   const [showToast, setShowToast] = useState(false);
@@ -52,22 +53,15 @@ export const XboxGameBarGuide = () => {
 
         <section id="guide-content" className="scroll-reveal content-section" style={{ minHeight: '60vh' }}>
 
-          <div className="tabs-switcher">
-            <button
-              type="button"
-              onClick={() => setActiveTab('auto')}
-              className={`tab-btn ${activeTab === 'auto' ? 'active' : ''}`}
-            >
-              {t('xbox.tabs.auto')}
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('manual')}
-              className={`tab-btn ${activeTab === 'manual' ? 'active' : ''}`}
-            >
-              {t('xbox.tabs.manual')}
-            </button>
-          </div>
+          <TabsSwitcher
+            activeTab={activeTab}
+            onChange={setActiveTab}
+            layoutId="xboxTabs"
+            tabs={[
+              { id: 'auto', label: t('xbox.tabs.auto') },
+              { id: 'manual', label: t('xbox.tabs.manual') },
+            ]}
+          />
 
           {activeTab === 'auto' && (
             <div className="tab-content" style={{ animation: 'fade-in 0.3s ease-out' }}>
@@ -83,8 +77,8 @@ export const XboxGameBarGuide = () => {
                     </div>
                   </div>
                 </AnimatedStepItem>
-                <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-                  <div className="step-number" style={{ marginTop: '4px' }}>02</div>
+                <AnimatedStepItem>
+                  <div className="step-number">02</div>
                   <div className="step-content">
                     <div className="step-title-main" style={{ marginBottom: '16px' }}>
                       <Trans i18nKey="xbox.auto.step2">
@@ -106,7 +100,7 @@ export const XboxGameBarGuide = () => {
                   <AnimatedGroupItem style={{ height: '100%' }}>
                     <FeatureCard icon="📥">
                       <Trans i18nKey="xbox.auto.adv1">
-                        Автоматически скачает самую актуальную и свежую версию кода напрямую с площадки <a href="https://github.com/D1x2k/Wiki-by-D1x2k/blob/main/Delete-gamebar.bat" target="_blank" rel="noreferrer" className="inline-code feature-link">GitHub</a>.
+                        Автоматически скачает самую актуальную и свежую версию кода напрямую с площадки <a href="https://github.com/D1x2k/Wiki-by-D1x2k/blob/main/App/Delete-gamebar.bat" target="_blank" rel="noreferrer" className="inline-code feature-link">GitHub</a>.
                       </Trans>
                     </FeatureCard>
                   </AnimatedGroupItem>
@@ -162,8 +156,8 @@ export const XboxGameBarGuide = () => {
                     </div>
                   </div>
                 </AnimatedStepItem>
-                <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-                  <div className="step-number" style={{ marginTop: '4px' }}>02</div>
+                <AnimatedStepItem>
+                  <div className="step-number">02</div>
                   <div className="step-content">
                     <div className="step-title-main" style={{ marginBottom: '16px' }}>
                       <Trans i18nKey="xbox.manual.step2">
@@ -191,8 +185,8 @@ export const XboxGameBarGuide = () => {
                     </div>
                   </div>
                 </AnimatedStepItem>
-                <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-                  <div className="step-number" style={{ marginTop: '4px' }}>02</div>
+                <AnimatedStepItem>
+                  <div className="step-number">02</div>
                   <div className="step-content">
                     <div className="step-title-main" style={{ marginBottom: '16px' }}>{t('xbox.manual.fix_step2')}</div>
 

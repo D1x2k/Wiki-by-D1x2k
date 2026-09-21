@@ -5,6 +5,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useGlowEffect } from '../hooks/useGlowEffect';
 import { Toast } from '../components/Toast';
 import { AnimatedStepsContainer, AnimatedStepItem } from '../components/AnimatedSteps';
+import { TabsSwitcher } from '../components/TabsSwitcher';
 import unlikeScript from '../scripts/yamUnlike.js?raw';
 import likeScript from '../scripts/yamLike.js?raw';
 
@@ -168,22 +169,15 @@ export const YandexMusicGuide = () => {
         <section id="guide-content" className="scroll-reveal content-section" style={{ minHeight: '60vh' }}>
           
           {/* Переключатель вкладок */}
-          <div className="tabs-switcher">
-            <button
-              type="button"
-              onClick={() => setActiveTab('unlike')}
-              className={`tab-btn ${activeTab === 'unlike' ? 'active' : ''}`}
-            >
-              {t('yandex_music.tabs.unlike')}
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveTab('like')}
-              className={`tab-btn ${activeTab === 'like' ? 'active' : ''}`}
-            >
-              {t('yandex_music.tabs.like')}
-            </button>
-          </div>
+          <TabsSwitcher
+            activeTab={activeTab}
+            onChange={setActiveTab}
+            layoutId="yandexMusicTabs"
+            tabs={[
+              { id: 'unlike', label: t('yandex_music.tabs.unlike') },
+              { id: 'like', label: t('yandex_music.tabs.like') },
+            ]}
+          />
 
           {activeTab === 'unlike' && (
             <div className="tab-content" style={{ animation: 'fade-in 0.3s ease-out' }}>
@@ -228,8 +222,8 @@ export const YandexMusicGuide = () => {
                   </div>
                 </AnimatedStepItem>
 
-                <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-                  <div className="step-number" style={{ marginTop: '4px' }}>04</div>
+                <AnimatedStepItem>
+                  <div className="step-number">04</div>
                   <div className="step-content">
                     <div className="step-title-main" style={{ marginBottom: '16px' }}>
                       <Trans i18nKey="yandex_music.unlike.step4">
@@ -286,8 +280,8 @@ export const YandexMusicGuide = () => {
                   </div>
                 </AnimatedStepItem>
 
-                <AnimatedStepItem style={{ alignItems: 'flex-start' }}>
-                  <div className="step-number" style={{ marginTop: '4px' }}>04</div>
+                <AnimatedStepItem>
+                  <div className="step-number">04</div>
                   <div className="step-content">
                     <div className="step-title-main" style={{ marginBottom: '16px' }}>
                       <Trans i18nKey="yandex_music.like.step4">
