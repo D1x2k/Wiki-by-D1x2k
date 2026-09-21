@@ -11,7 +11,7 @@
     "cards": {
       "windows": {
         "title": "Windows Activation",
-        "desc": "Automatic and manual installation of official KMS keys for Windows 10/11."
+        "desc": "Installation of official KMS keys for Windows 10/11."
       },
       "xbox": {
         "title": "Remove Xbox Game Bar",

@@ -11,7 +11,7 @@
     "cards": {
       "windows": {
         "title": "Активация Windows",
-        "desc": "Автоматическая и ручная установка официальных KMS-ключей для Windows 10/11."
+        "desc": "Установка официальных KMS-ключей для Windows 10/11."
       },
       "xbox": {
         "title": "Удаление Xbox Game Bar",

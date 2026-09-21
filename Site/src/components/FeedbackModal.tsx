@@ -14,7 +14,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
   const { t } = useTranslation();
   const [type, setType] = useState<FeedbackType>('idea');
   const [message, setMessage] = useState('');
-  const [contact, setContact] = useState('');
   const [state, setState] = useState<FormState>('idle');
 
   // Escape для закрытия + блокировка прокрутки фона
@@ -38,7 +37,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
     const timer = window.setTimeout(() => {
       setState('idle');
       setMessage('');
-      setContact('');
       setType('idea');
       onClose();
     }, 2500);
@@ -61,7 +59,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
           from_name: 'Предложка Wiki by D1x2k',
           'Тема обращения': t(`feedback.types.${type}`),
           'Текст сообщения': message,
-          'Контакт для связи': contact || 'Не указан',
         }),
       });
 
@@ -184,20 +181,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
                     placeholder={t('feedback.message_placeholder')}
                     required
                     className="form-textarea custom-scrollbar"
-                  />
-                </div>
-
-                <div className="form-field">
-                  <label htmlFor="contact" className="form-label">
-                    {t('feedback.contact_label')}
-                  </label>
-                  <input
-                    id="contact"
-                    type="text"
-                    value={contact}
-                    onChange={(e) => setContact(e.target.value)}
-                    placeholder={t('feedback.contact_placeholder')}
-                    className="form-input"
                   />
                 </div>
 
