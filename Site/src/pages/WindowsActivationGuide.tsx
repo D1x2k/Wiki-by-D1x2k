@@ -93,7 +93,7 @@ export const WindowsActivationGuide = () => {
                     </div>
                   </div>
 
-                  <div className="security-box" style={{ marginTop: '20px', padding: '16px', borderStyle: 'solid', background: 'rgba(255, 255, 255, 0.005)' }}>
+                  <div className="security-box" style={{ marginTop: '20px', padding: '16px', borderStyle: 'solid', background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.005) 100%), #040404', position: 'relative', zIndex: 2 }}>
                     <div style={{ fontSize: '13px', lineHeight: 1.5, color: 'var(--text-secondary)' }}>
                       <Trans i18nKey="windows.manual.info">
                         💡 <b>Важно:</b> Ключ в строке по умолчанию настроен на версию <b>Pro</b>. Если у вас установлена другая редакция, просто скопируйте нужный ключ из таблицы ниже и замените им первый блок символов (<span className="inline-code">W269N-...</span>) в команде перед тем, как нажать <b>Enter</b>.

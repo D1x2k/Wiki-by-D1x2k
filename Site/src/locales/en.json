@@ -34,11 +34,68 @@
   "cloudflare": {
     "title": "Restore",
     "tooltip": "A secure application for connecting to Cloudflare's Zero Trust network",
+    "tabs": {
+      "method1": "Method 1",
+      "method2": "Method 2",
+      "dns": "If routed to RU IP"
+    },
+    "method1": {
+      "step1": "Download and extract the <1>zapret discord youtube</1> program.",
+      "step2": "Navigate to <1>lists\\list-general.txt</1> and paste the following domains:",
+      "step2_badge": "New Domains",
+      "step3": "Navigate to <1>utils/target.txt</1> and paste the following lines:"
+    },
+    "method2": {
+      "title": "Downgrade version and reset client settings",
+      "step1_title": "Download an older version of Cloudflare One Client",
+      "step1_desc": "Go to the official <1>Cloudflare Developers</1> page and download an older version (open the <strong>Previous version history</strong> tab located below Latest release).",
+      "step2_title": "Reset settings and switch protocol",
+      "step2_desc": "Open <1>Command Prompt (cmd)</1> <strong>as Administrator</strong> and run the following commands sequentially:",
+      "cmd1_comment": "Removes old device registration",
+      "cmd2_comment": "Creates a new client registration",
+      "cmd3_comment": "Switches tunnel protocol to MASQUE",
+      "cmd4_comment": "Sets compatibility parameter h2-only",
+      "all_cmds_label": "All 4 commands combined (copy all at once):",
+      "step3_title": "Restart application",
+      "step3_desc": "After applying the commands, completely <strong>restart Cloudflare WARP</strong> and try connecting again.",
+      "faq_hint": "If this still didn't help, be sure to check the FAQ below: <1>«Nothing changes after following the steps?»</1>."
+    },
+    "dns": {
+      "title": "How to bypass AI and other blocks with Xbox DNS",
+      "desc": "This method works great alongside <strong>Cloudflare WARP</strong> if the client routes you to <strong>RU servers</strong>. By configuring secure DNS in your browser, you can easily open <strong>ChatGPT</strong>, <strong>Claude</strong>, <strong>TikTok</strong>, and other blocked services without switching programs.",
+      "official_link": "Official project website: <1>xbox-dns.ru ↗</1>",
+      "chromium_title": "Chrome / Edge / Opera / Yandex Browser",
+      "chromium_step1": "Open <strong>Settings → Privacy and security</strong> (in Edge: 'Privacy, search, and services').",
+      "chromium_step2": "Find the <strong>'Use secure DNS'</strong> option.",
+      "chromium_step3": "Enable the option and select <strong>'With other provider'</strong> (or 'Custom').",
+      "chromium_step4": "In the field that appears, paste the URL:",
+      "firefox_title": "Mozilla Firefox",
+      "firefox_step1": "Open <strong>Settings → Privacy & Security</strong>.",
+      "firefox_step2": "Scroll down to the <strong>'DNS over HTTPS'</strong> section.",
+      "firefox_step3": "Select <strong>'Max Protection'</strong> and under 'Choose provider' click <strong>'Custom'</strong>.",
+      "firefox_step4": "In the field that appears, paste the URL:"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions (FAQ)",
+      "quick_link": "Something not working? Frequently Asked Questions (FAQ) ↓",
+      "q1": "Nothing changes after following the steps?",
+      "a1": "If nothing changes after all steps, <strong>your ISP is blocking it!</strong> Unfortunately, ISP-level blocks cannot be bypassed.",
+      "q2": "Do I need to restart my PC?",
+      "a2": "After all steps, I strongly <strong>recommend restarting your PC!</strong> This is needed for network settings to apply properly.",
+      "q3": "Why aren't AI tools (ChatGPT) or TikTok working?",
+      "a3": "If you are connected to <strong>Russian servers</strong>, <strong>AI tools will not work!</strong> As well as TikTok and certain foreign services. You can check which country and server you are connected to on <1>2ip.io</1>.",
+      "q4": "Can I change the server Cloudflare One Client connects to?",
+      "a4": "You <strong>CANNOT</strong> change the server Cloudflare One Client connects to! If connected to a <strong>Russian server</strong> — either use Russian servers (most blocked sites will work), or switch to another app.",
+      "q5": "Which zapret version should I download and where are the video files?",
+      "a5": "Download the latest version of <strong>zapret</strong>. It contains all the files from the video!",
+      "yt_label": "Watch updated video guide on YouTube:"
+    },
     "step1": {
       "title": "Download and extract the <1>zapret discord youtube</1> program."
     },
     "step2": {
-      "title": "Navigate to <1>lists\\list-general.txt</1> and paste the following domains:"
+      "title": "Navigate to <1>lists\\list-general.txt</1> and paste the following domains:",
+      "badge_new": "New Domains"
     },
     "step3": {
       "title": "Navigate to <1>utils/target.txt</1> and paste the following lines:"
