@@ -276,6 +276,10 @@
     "desc": "Perhaps it was deleted or you entered the wrong address.",
     "button": "Back to Home"
   },
+  "support": {
+    "button": "Support Project",
+    "header_button": "Support"
+  },
   "feedback": {
     "button": "Suggest an Idea",
     "title": "Feedback",

@@ -921,6 +921,26 @@
     .step-item[style*="alignItems: flex-start"] .step-title-main {
         padding-top: 5px;
     }
+    .support-header-btn {
+        padding: 0 12px;
+        width: 44px;
+        justify-content: center;
+    }
+    .support-header-text,
+    .support-header-arrow {
+        display: none;
+    }
+    .support-header-icon {
+        font-size: 18px;
+    }
+    .support-btn,
+    .feedback-btn {
+        padding: 14px 24px;
+        font-size: 16px;
+        border-radius: 16px;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 
@@ -934,6 +954,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-bottom: 48px;
 }
 
@@ -1026,6 +1049,62 @@
 .feedback-btn-icon {
   font-size: 24px;
 }
+
+/* ---------- Кнопка поддержать в шапке (header-controls) ---------- */
+.support-header-btn {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.12) 0%, rgba(128, 80, 255, 0.1) 100%), #09080e;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 12px;
+  color: var(--accent-soft);
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 0 16px rgba(168, 85, 247, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.support-header-btn:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(128, 80, 255, 0.22) 100%), #120d1f;
+  border-color: rgba(168, 85, 247, 0.65);
+  box-shadow: 0 6px 24px rgba(168, 85, 247, 0.35), 0 0 25px rgba(168, 85, 247, 0.35);
+  color: #ffffff;
+}
+
+.support-header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.support-header-text {
+  line-height: 1;
+}
+
+.support-header-arrow {
+  font-size: 13px;
+  opacity: 0.75;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.support-header-btn:hover .support-header-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
 
 
 /* ---------- Модальное окно (Обратная связь) ---------- */

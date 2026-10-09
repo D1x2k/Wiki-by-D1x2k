@@ -10,6 +10,7 @@ import { NotFound } from './pages/NotFound';
 import { ParticlesBackground } from './components/ParticlesBackground';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { SocialLinks } from './components/SocialLinks';
+import { SupportHeaderButton } from './components/SupportHeaderButton';
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
@@ -47,6 +48,7 @@ function App() {
     <Router>
       <ParticlesBackground />
       <div className="header-controls">
+        <SupportHeaderButton />
         <SocialLinks />
         <LanguageSwitcher />
       </div>

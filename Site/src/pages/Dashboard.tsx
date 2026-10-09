@@ -27,6 +27,19 @@ export const Dashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.4 }}
         >
+          <motion.a
+            href="https://pay.cloudtips.ru/p/7d8930d9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="feedback-btn"
+            style={{ textDecoration: 'none' }}
+            whileHover={{ scale: 1.05, y: -2, boxShadow: '0 8px 32px rgba(168, 85, 247, 0.4)' }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="feedback-btn-icon">❤️</span>
+            {t('support.button', 'Поддержать проект')}
+          </motion.a>
+
           <motion.button
             onClick={() => setIsFeedbackOpen(true)}
             className="feedback-btn"
