@@ -1882,3 +1882,157 @@
     font-size: 16px;
   }
 }
+
+/* ---------- Обёртка плашки в левом верхнем углу ---------- */
+.domain-header-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.domain-header-pill {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  background: #08080b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.domain-header-pill:hover {
+  background: #0d0c13;
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 14px rgba(168, 85, 247, 0.12);
+}
+
+.domain-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+  flex-shrink: 0;
+}
+
+.domain-pill-globe {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(255, 255, 255, 0.45);
+  flex-shrink: 0;
+  transition: stroke 0.2s ease;
+}
+
+.domain-header-pill:hover .domain-pill-globe {
+  stroke: rgba(168, 85, 247, 0.85);
+}
+
+.domain-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.domain-pill-domain {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.domain-header-pill:hover .domain-pill-domain {
+  color: #ffffff;
+}
+
+.domain-pill-copied-text {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+/* ---------- Аккуратный тултип в стиле SmartTooltip ---------- */
+.domain-custom-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  padding: 8px 12px;
+  background: rgba(15, 15, 20, 0.96);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(139, 92, 246, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.domain-tooltip-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .domain-header-wrapper {
+    top: 16px;
+    left: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .domain-pill-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .domain-header-wrapper {
+    top: 12px;
+    left: 12px;
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+  .domain-header-pill {
+    height: 40px;
+    padding: 0 10px;
+    gap: 6px;
+  }
+  .domain-pill-domain {
+    font-size: 12px;
+  }
+  .domain-custom-tooltip {
+    white-space: normal;
+    max-width: 240px;
+  }
+}
+

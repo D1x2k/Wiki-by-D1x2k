@@ -31,6 +31,12 @@
       }
     }
   },
+  "domain_pill": {
+    "badge": "Скоро",
+    "tooltip_text": "Скоро переезд на личный домен wiki-by-d1x2k.ru",
+    "tooltip_sub": "Кликните, чтобы скопировать адрес",
+    "copied": "Скопировано!"
+  },
   "cloudflare": {
     "title": "Восстановить",
     "tooltip": "Приложение для безопасного подключения к сети Zero Trust от Cloudflare",

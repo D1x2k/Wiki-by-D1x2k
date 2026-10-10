@@ -31,6 +31,12 @@
       }
     }
   },
+  "domain_pill": {
+    "badge": "Soon",
+    "tooltip_text": "Moving soon to personal domain wiki-by-d1x2k.ru",
+    "tooltip_sub": "Click to copy address",
+    "copied": "Copied!"
+  },
   "cloudflare": {
     "title": "Restore",
     "tooltip": "A secure application for connecting to Cloudflare's Zero Trust network",

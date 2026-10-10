@@ -11,6 +11,7 @@ import { ParticlesBackground } from './components/ParticlesBackground';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { SocialLinks } from './components/SocialLinks';
 import { SupportHeaderButton } from './components/SupportHeaderButton';
+import { DomainNoticePill } from './components/DomainNoticePill';
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.div
@@ -47,6 +48,7 @@ function App() {
   return (
     <Router>
       <ParticlesBackground />
+      <DomainNoticePill />
       <div className="header-controls">
         <SupportHeaderButton />
         <SocialLinks />
