@@ -9,6 +9,7 @@ import { AnimatedStepsContainer, AnimatedStepItem } from '../components/Animated
 import { SmartTooltip } from '../components/SmartTooltip';
 import { TabsSwitcher } from '../components/TabsSwitcher';
 import { TerminalCard } from '../components/TerminalCard';
+import { APP_VERSION } from '../config/version';
 
 const MultilineCodeCard = ({ code, onCopy, expandable = false }: { code: string, onCopy: () => void, expandable?: boolean }) => {
   const [isExpanded, setIsExpanded] = useState(!expandable);
@@ -683,7 +684,7 @@ warp-cli tunnel masque-options set h2-only`;
         </section>
 
         <footer className="scroll-reveal">
-          <div>v2.0.0</div>
+          <div>{APP_VERSION}</div>
           <div>Guide by D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k</div>
           <div>&copy; 2026 Instructions. D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k dev.</div>
         </footer>

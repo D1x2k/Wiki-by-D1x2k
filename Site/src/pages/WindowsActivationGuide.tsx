@@ -6,6 +6,7 @@ import { Toast } from '../components/Toast';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { useGlowEffect } from '../hooks/useGlowEffect';
 import { AnimatedStepsContainer, AnimatedStepItem } from '../components/AnimatedSteps';
+import { APP_VERSION } from '../config/version';
 
 export const WindowsActivationGuide = () => {
   const [showToast, setShowToast] = useState(false);
@@ -147,7 +148,7 @@ export const WindowsActivationGuide = () => {
         </section>
 
         <footer className="scroll-reveal">
-          <div>v2.0.0</div>
+          <div>{APP_VERSION}</div>
           <div>Guide by D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k</div>
           <div>&copy; 2026 Instructions. D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k dev.</div>
         </footer>

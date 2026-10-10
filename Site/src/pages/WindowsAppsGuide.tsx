@@ -10,6 +10,7 @@ import { useGlowEffect } from '../hooks/useGlowEffect';
 import { AnimatedStepsContainer, AnimatedStepItem, AnimatedGroupContainer, AnimatedGroupItem } from '../components/AnimatedSteps';
 import { SmartTooltip } from '../components/SmartTooltip';
 import { TabsSwitcher } from '../components/TabsSwitcher';
+import { APP_VERSION } from '../config/version';
 
 const appsList = [
   { key: 'copilot', cmd: 'Get-AppxPackage *Copilot* -AllUsers | Remove-AppxPackage' },
@@ -282,7 +283,7 @@ export const WindowsAppsGuide = () => {
         </section>
 
         <footer className="scroll-reveal">
-          <div>v2.0.0</div>
+          <div>{APP_VERSION}</div>
           <div>Guide by D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k</div>
           <div>&copy; 2026 Instructions. D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k dev.</div>
         </footer>

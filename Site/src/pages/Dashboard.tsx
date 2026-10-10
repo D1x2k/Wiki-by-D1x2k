@@ -4,6 +4,7 @@ import { TiltCard } from '../components/TiltCard';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FeedbackModal } from '../components/FeedbackModal';
+import { APP_VERSION } from '../config/version';
 
 export const Dashboard = () => {
   const { t } = useTranslation();
@@ -100,7 +101,7 @@ export const Dashboard = () => {
         </section>
 
         <footer style={{ marginTop: '60px' }}>
-          <div>v2.0.0</div>
+          <div>{APP_VERSION}</div>
           <div>Guides by D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k</div>
           <div>&copy; 2026 Instructions. D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k dev.</div>
         </footer>

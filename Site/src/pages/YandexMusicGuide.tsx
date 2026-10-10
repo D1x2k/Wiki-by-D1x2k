@@ -8,6 +8,7 @@ import { AnimatedStepsContainer, AnimatedStepItem } from '../components/Animated
 import { TabsSwitcher } from '../components/TabsSwitcher';
 import unlikeScript from '../scripts/yamUnlike.js?raw';
 import likeScript from '../scripts/yamLike.js?raw';
+import { APP_VERSION } from '../config/version';
 
 const MultilineCodeCard = ({ code, onCopy, expandable = false }: { code: string, onCopy: () => void, expandable?: boolean }) => {
   const [isExpanded, setIsExpanded] = useState(!expandable);
@@ -298,7 +299,7 @@ export const YandexMusicGuide = () => {
         </section>
 
         <footer className="scroll-reveal">
-          <div>v2.0.0</div>
+          <div>{APP_VERSION}</div>
           <div>Guide by D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k</div>
           <div>&copy; 2026 Instructions. D1<span style={{ fontFamily: 'Arial, sans-serif' }}>x</span>2k dev.</div>
         </footer>
