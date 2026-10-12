@@ -67,9 +67,9 @@
       "faq_hint": "If this still didn't help, be sure to check the FAQ below: <1>«Nothing changes after following the steps?»</1>."
     },
     "dns": {
-      "title": "How to bypass AI and other blocks with Xbox DNS",
+      "title": "How to bypass AI and other blocks with Comss.one DNS",
       "desc": "This method works great alongside <strong>Cloudflare WARP</strong> if the client routes you to <strong>RU servers</strong>. By configuring secure DNS in your browser, you can easily open <strong>ChatGPT</strong>, <strong>Claude</strong>, <strong>TikTok</strong>, and other blocked services without switching programs.",
-      "official_link": "Official project website: <1>xbox-dns.ru ↗</1>",
+      "official_link": "Official service page: <1>comss.ru ↗</1>",
       "chromium_title": "Chrome / Edge / Opera / Yandex Browser",
       "chromium_step1": "Open <strong>Settings → Privacy and security</strong> (in Edge: 'Privacy, search, and services').",
       "chromium_step2": "Find the <strong>'Use secure DNS'</strong> option.",

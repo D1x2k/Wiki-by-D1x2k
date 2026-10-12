@@ -225,7 +225,7 @@ warp-cli registration new
 warp-cli tunnel protocol set MASQUE
 warp-cli tunnel masque-options set h2-only`;
 
-  const dohAddress = 'https://xbox-dns.ru/dns-query';
+  const dohAddress = 'https://dns.comss.one/dns-query';
 
   const faqItems = [
     {
@@ -534,12 +534,12 @@ warp-cli tunnel masque-options set h2-only`;
                     <span>🌐</span> {t('cloudflare.dns.title')}
                   </h3>
                   <a
-                    href="https://xbox-dns.ru/#setup"
+                    href="https://www.comss.ru/page.php?id=7315"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="dns-intro-link"
                   >
-                    <span>xbox-dns.ru</span>
+                    <span>comss.ru</span>
                     <span>↗</span>
                   </a>
                 </div>
