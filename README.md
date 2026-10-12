@@ -18,7 +18,7 @@
 ## Добро пожаловать в мою персональную базу знаний!
 Здесь я собираю, структурирую и храню полезную информацию, документацию по своим проектам, гайды и просто интересные заметки.
 
-🌐 **Сайт проекта:** [d1x2k.github.io/Wiki-by-D1x2k](https://d1x2k.github.io/Wiki-by-D1x2k/)
+🌐 **Сайт проекта:** [wiki-by-d1x2k.ru](https://wiki-by-d1x2k.ru/)
 
 ## 📑 Что вы найдете на сайте?
 - 📚 **Гайды и туториалы** — подробные пошаговые инструкции, написанные специально для сообщества.
@@ -42,7 +42,7 @@
 ## Welcome to my personal knowledge base!
 Here I collect, structure, and store useful information, documentation for my projects, guides, and just interesting notes.
 
-🌐 **Project Website:** [d1x2k.github.io/Wiki-by-D1x2k](https://d1x2k.github.io/Wiki-by-D1x2k/)
+🌐 **Project Website:** [wiki-by-d1x2k.ru](https://wiki-by-d1x2k.ru/)
 
 ## 📑 What will you find on the website?
 - 📚 **Guides and Tutorials** — detailed step-by-step instructions written specifically for the community.

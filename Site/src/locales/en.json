@@ -32,8 +32,8 @@
     }
   },
   "domain_pill": {
-    "badge": "Soon",
-    "tooltip_text": "Moving soon to personal domain wiki-by-d1x2k.ru",
+    "badge": "New Domain",
+    "tooltip_text": "The website now has its own domain wiki-by-d1x2k.ru",
     "tooltip_sub": "Click to copy address",
     "copied": "Copied!"
   },
